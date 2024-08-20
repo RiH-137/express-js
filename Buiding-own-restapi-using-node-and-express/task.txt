@@ -1,0 +1,49 @@
+REST API --> JSON
+
+
+GET /users --> List all users
+GET /users/2 --> get the user with ID 2
+GET /users/3 --> get the user with ID 3
+
+
+POST /users --> craete new user
+
+PATCH /users/1 --> Edit the user with ID 1
+
+
+DELETE /users/1 --> Delete the user with ID 1
+
+// Visit mokaroo.com as it can generate fake datas for testing purposes.
+
+
+
+GET /users -> give output as  HTML Document Render 
+
+GET /api/users --> give output in the form of APIs
+
+
+
+// DYNAMIC PATH PARAMETERS
+DELETE /users/1 ; here 1 is my dynamic path PARAMETER
+
+get /api/users/:id              means :id is variable or dunamic
+
+
+
+
+
+
+--------------xxxx--------------------xxxxx------------------xxxxx---------------xxxx-------
+For POST, PATCH, Delete we use postman
+
+POSTMAN is tool helps in API testing and docx maintaining.
+
+In postman "200 OK" means all things are running good on the postman.
+
+In postman, select post and past the url; after that see the posted data
+and now click on post and select "x-wwwform-urlencoded" option and now we can set that from there only.
+
+middleware--> convert the body in JS object and pu it into the datafile.
+
+
+
