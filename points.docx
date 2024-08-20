@@ -1,0 +1,30 @@
+Question--> what was the problem with the node?
+
+ANSWER--> 1. Node js code is very complex. 
+          2. For every route we need to create a seprate route using switch.
+          3. In node we handle HTTP methods(get post etc) separately which is a pain itself.
+          4. for different use we need to create different packages like for using "url" we need
+                to create url package, similarly for header, http and json.
+
+
+Express js--> Express JS is the framework for node js for writing and managing handlers
+
+npm install express 
+--> it will craete package.json file
+
+import express-->
+const express = require("express")
+
+1. express makes code clear, modular and helps us to handle routes easily.
+2. express creates server without using http module. It uses HTTP module internally.
+3. app.METHOD(PATH, HANDLER)
+4. app is an instance of express.
+5. METHOD is an HTTP request method, in lowercas
+6. PATH is the path on the server.
+7. HANDLER is the function thats need to be excuted when the route is mathed.
+
+
+
+
+
+
