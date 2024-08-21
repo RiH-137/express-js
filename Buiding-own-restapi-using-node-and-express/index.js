@@ -10,7 +10,47 @@ const PORT = 3000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-//our middleware with urlencoded
+
+app.use((req, res, next) => { 
+    console.log("Hello from middleware 2");
+    return res.json("Hey, there this is middleware 2" );         
+    next();
+    
+}); 
+
+
+app.use((req, res, next) => { 
+    console.log("Hello from middleware 3");
+    req.myUserName="rih";
+
+    next();
+    
+}); 
+
+
+app.use((req, res, next) => { 
+    console.log("Hello from middleware 2");
+    return res.json(  "Hey, there this is middleware 3", req.myUserName);         
+    next();
+    
+}); 
+
+
+
+app.use((req, res, next) => {
+    FileSystem.appendFile("log.txt",` \n${Date.now()}: Request URL: ${req.url}\n : REQUEST IP ${req.ip}`, (err, data) => {
+    next();
+    
+    });
+
+});
+
+
+
+    //the whole code will be stopped here and move to app.listen section to avoid this we use next() function
+
+
+// middleware with urlencoded --> built-in middleware
 app.use(express.urlencoded({extended: false}));  // can handle the form data from the postman's body
 
 // Routes
@@ -119,10 +159,46 @@ app.route("/api/users/:id")
         // Update user with id
     });
 
+
+// adding header to the RESTAPI
+app.get("/api/users", (req, res) => {
+    res.setheader("X-myName", "Rih");                                   // custome Header, always add X to the custom Header.
+    console.log("Header", req.headers);
+    console.log("Header", req.headers("myName"));
+    return res.json(users);
+});
+
+// also we have many built-in haders. Just search in documentation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Yeah! Server is running on port ${PORT}.`);
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 

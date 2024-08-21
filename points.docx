@@ -1,3 +1,6 @@
+npm istall nodemon --> using this we dont need to start server again n again.
+"server" :"nodemon index.js"
+
 Question--> what was the problem with the node?
 
 ANSWER--> 1. Node js code is very complex. 
@@ -22,6 +25,80 @@ const express = require("express")
 5. METHOD is an HTTP request method, in lowercas
 6. PATH is the path on the server.
 7. HANDLER is the function thats need to be excuted when the route is mathed.
+
+
+
+
+----------------------------------------xxxxxxxxxxxx---------------------------------------
+Middleware
+Middleware functions are the functions that have access to the request object(req), response object(res),
+and the next middlewarefunction in the application's request-response cycle. 
+
+eg., app.use(express.json());
+
+middleware functions can perform the certain tasks:
+1. Execute any code.
+2. Make changes to the request and response objects.
+3. End the request-response cycle.
+4. Call the next middleware function in the stack.
+
+"next()" function is use to point the next middleware functiom. without "next() function there
+execution of the code will be slopped at that place.
+
+If there are multiple middlewares in a code, then the lower middleware has the access of the variable
+of the upper one.
+The higher middleware does not have access to variables or modifications made by the lower middleware.
+In Express.js, middleware functions are executed in the order they are defined,
+and each middleware only has access to the modifications made by the middlewares that were executed before it.
+
+
+
+
+
+---------------------------------------XXXX-------------XXXX---------------XXXX------------------------------
+
+
+HTTP HEADERS
+HTTP HEADERS are tyhe important part of the API request and response as they represent the meta-data(addn. info)
+that is associated with the API request and response.
+
+Headers carry information fpr the request and response Body.
+
+
+Basically it carries additional information about the req, res.
+
+
+To view HEADERS move to chrome browswer and inspect--> network--> Headers
+
+
+
+
+
+
+
+-----------XXXX--------------------------XXXXX----------------------XXXX--------------------
+HTTP RESPONSE STATUS CODES
+
+1. information response (100-199)
+2. successful response (200-299)
+3. Redirection messages (300-399)
+4. client error RESPONSEs (400-499)
+5. Server error responses (500-599)
+
+
+200 OK--> everything is ok.
+
+201 -> created (post)
+202 -> accepted
+
+Follow documentation for this. :)
+
+
+
+
+
+
+
 
 
 
