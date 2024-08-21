@@ -104,6 +104,20 @@ MONGODB
 
 
 
+> mongosh
+> show dbs
+> use <db_name>
+> show collections
+> db.coll.find()
+> db.coll.insert()
+
+1. we need to create a schema
+2. perform crud operation
+
+
+MONGODB PLAYGROUND is a script that help to do crud operation.
+
+
 
 
 
