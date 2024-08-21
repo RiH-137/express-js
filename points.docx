@@ -116,7 +116,9 @@ MONGODB
 
 
 MONGODB PLAYGROUND is a script that help to do crud operation.
+Creating file in MongoDb--> extension _______.mongodb.js
 
+// Follow MongoDB documentation for codes.
 
 
 
