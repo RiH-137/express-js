@@ -95,6 +95,12 @@ Follow documentation for this. :)
 
 
 
+MONGODB
+1. No-sql document based Database
+2. Strong Support for Aggregation pipes
+3. Works on BSON format
+4. Best for Node Application.
+
 
 
 
