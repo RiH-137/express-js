@@ -94,7 +94,8 @@ app.post("/api/users", (req, res) => {
         email: "newuser@gmail.com"
     };
     users.push(newUser);
-    return res.status(201).json(newUser);
+    return res.status(201).json(newUser);                           // 201 is use to check status of POST
+    
 });
 
 // getting data from the postman --body
